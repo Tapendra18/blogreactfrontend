@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 const Post = () => {
   const [post, setPost] = useState([]);
   console.log(post, "posttt");
-  const image = "http://localhost:8000/";
+  const image = "http://localhost:8002/";
 
   const getAllPost = async () => {
     try {
       await axios
-        .get("http://localhost:8000/api/v1/post/get")
+        .get("http://localhost:8002/api/v1/post/get")
         .then((response) => setPost(response.data.data));
     } catch (err) {
       console.log(err);
@@ -53,7 +53,7 @@ const Post = () => {
                       <div className="meta">
                         <ul className="list-inline">
                           <li>
-                            <a href="author.html">{data.author}</a>
+                            <a href="/">{data.author}</a>
                           </li>
                           <li className="dot"></li>
                           {/* <li>{format(data.createdAt, "yyyy/mm/dd")}</li> */}

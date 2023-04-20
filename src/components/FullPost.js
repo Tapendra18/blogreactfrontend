@@ -14,14 +14,14 @@ const FullPost = () => {
 
   const getAllComment = async () => {
     await axios
-      .get("http://localhost:8000/api/v1/comment/get")
+      .get("http://localhost:8002/api/v1/comment/get")
       .then((response) => setgetComment(response.data.data))
       .catch((err) => console.log(err));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8000/api/v1/comment/add", comment);
+    await axios.post("http://localhost:8002/api/v1/comment/add", comment);
     if (DataTransfer.success) {
       alert("successs");
     }
@@ -37,7 +37,7 @@ const FullPost = () => {
   const getPostDetails = async () => {
     try {
       await axios
-        .get(`http://localhost:8000/api/v1/post/get/${slug}`)
+        .get(`http://localhost:8002/api/v1/post/get/${slug}`)
         .then((response) => setBlog(response.data))
         .catch((err) => {
           console.log(err);
@@ -49,24 +49,24 @@ const FullPost = () => {
 
   const handleLike = async () => {
     await axios
-      .post("http://localhost:8000/api/v1/likeunlike/likeadd")
+      .post("http://localhost:8002/api/v1/likeunlike/likeadd")
       .then((response) => setLike(response.data))
       .catch((err) => console.log(err));
   };
 
   const getlike = async () => {
     await axios
-      .get("http://localhost:8000/api/v1/likeunlike/get")
+      .get("http://localhost:8002/api/v1/likeunlike/get")
       .then((response) => console.log(response));
   };
 
   const handleUnlike = async () => {
     await axios
-      .post("http://localhost:8000/api/v1/likeunlike/unlikeadd")
+      .post("http://localhost:8002/api/v1/likeunlike/unlikeadd")
       .then((response) => setUnlike(response.data))
       .catch((err) => console.log(err));
   };
-  const image = "http://localhost:8000/";
+  const image = "http://localhost:8002/";
 
   useEffect(() => {
     getPostDetails();

@@ -2,13 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const DeletePost = () => {
+const CategoryDelete = () => {
   const [pdelete, setpDelete] = useState();
   console.log(pdelete, "deleteeee");
 
   const getPost = async () => {
     await axios
-      .get("http://localhost:8002/api/v1/post/get")
+      .get("http://localhost:80002/api/v1/category/get")
       .then((response) => setpDelete(response.data.data));
   };
 
@@ -21,7 +21,7 @@ const DeletePost = () => {
 
   const deleteItem = (_id) => {
     axios
-      .delete(`http://localhost:8002/api/v1/post/delete/${_id}`)
+      .delete(`http://localhost:8002/api/v1/category/delete/${_id}`)
       .then((response) => {
         setpDelete(pdelete.filter((item) => item.id !== _id));
       })
@@ -46,18 +46,15 @@ const DeletePost = () => {
                       style={{ cursor: "pointer" }}
                     />
 
-                    <a className="categorie">
-                      <i className="icon_circle-slelected"></i>
-                      {data.meta_title}
-                    </a>
-                    <a className="categorie">{data.title}</a>
+                    <a className="categorie">{data.metatitle}</a>
+                    <a className="categorie">{data.name}</a>
                     <a className="categorie">{data.description}</a>
                     <a className="categorie">{data.meta_description}</a>
 
                     <div className="meta">
                       <ul className="list-inline">
                         <li>
-                          <a href="author.html">{data.author}</a>
+                          <a href="/">{data.word}</a>
                         </li>
                         <li className="dot"></li>
                         {/* <li>{format(data.createdAt, "yyyy/mm/dd")}</li> */}
@@ -74,4 +71,4 @@ const DeletePost = () => {
   );
 };
 
-export default DeletePost;
+export default CategoryDelete;

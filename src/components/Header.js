@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 
 const Header = () => {
   return (
@@ -35,57 +33,7 @@ const Header = () => {
                 <Link className="nav-link dropdown-toggle" to="/admin">
                   admin
                 </Link>
-
-                {/* <ul className="dropdown-menu fade-up">
-                  <li>
-                    <a className="dropdown-item" href="blog-list.html">
-                      Blog list
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="blog-list-2.html">
-                      Blog list 2
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="blog-grid.html">
-                      Blog Grid
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="blog-grid-2.html">
-                      Blog Grid 2
-                    </a>
-                  </li>
-                </ul> */}
               </li>
-              {/* <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                >
-                  Posts Features
-                </a>
-                <ul className="dropdown-menu fade-up">
-                  <li>
-                    <a className="dropdown-item" href="post-default.html">
-                      Post Default
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="post-right-sidebar.html">
-                      Right Sidebar
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="post-left-sidebar.html">
-                      Left Sidebar
-                    </a>
-                  </li>
-                </ul>
-              </li> */}
-
               <li className="nav-item">
                 {/* <a className="nav-link" href="/blog">
                  blog
@@ -160,101 +108,6 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <Carousel>
-        <section class="hero hero-1 hero-carousel d-flex align-items-center">
-          <div class="container">
-            <div class="owl-carousel">
-              <div class="row">
-                <div class="inner d-flex align-items-center">
-                  <div class="post">
-                    <a href="blog-grid.html" class="categorie">
-                      <i class="icon_circle-slelected"></i>Fashion
-                    </a>
-                    <h2>
-                      <a href="post-default.html">
-                        The biggest Spring/Summer 2021 trends for men
-                      </a>
-                    </h2>
-                    <div class="info">
-                      <ul class="list-inline">
-                        <li>
-                          <a href="author.html">Emma Dalia</a>
-                        </li>
-                        <li class="dot"></li>
-                        <li>2 Months Ago</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="image m-auto">
-                    <a href="post-default.html">
-                      <img src="assets/img/blog/27.jpg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="inner d-flex align-items-center">
-                  <div class="post">
-                    <a href="blog-grid.html" class="categorie">
-                      <i class="icon_circle-slelected"></i>Food
-                    </a>
-                    <h2>
-                      <a href="post-default.html">
-                        The Easiest loaf of Bread you'll ever bake
-                      </a>
-                    </h2>
-                    <div class="info">
-                      <ul class="list-inline">
-                        <li>
-                          <a href="author.html">Emma Dalia</a>
-                        </li>
-                        <li class="dot"></li>
-                        <li>2 Months Ago</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="image m-auto">
-                    <a href="post-default.html">
-                      <img src="assets/img/blog/4.jpg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="inner d-flex align-items-center">
-                  <div class="post">
-                    <a href="blog-grid.html" class="categorie">
-                      <i class="icon_circle-slelected"></i>Plants
-                    </a>
-                    <h2>
-                      <a href="post-default.html">
-                        How to Bring your Plants Indoors for the fall and winter
-                      </a>
-                    </h2>
-                    <div class="info">
-                      <ul class="list-inline">
-                        <li>
-                          <a href="author.html">Emma Dalia</a>
-                        </li>
-                        <li class="dot"></li>
-                        <li>2 Months Ago</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="image m-auto">
-                    <a href="post-default.html">
-                      <img src="assets/img/blog/32.jpg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Carousel>
     </div>
   );
 };

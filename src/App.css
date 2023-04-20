@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel-root{
+  margin-top: 118px;
+}
+
+.thumb{
+  width: 50% !important;
+}
+
+.thumb img{
+  width: 450px;
+  height: 450px;
+}
